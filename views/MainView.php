@@ -13,7 +13,6 @@
                 <th>Building</th>
             </tr>
             <?php
-            echo $_SESSION['username'];
             foreach ($data as $value) {
                 ?>
                 <tr>
