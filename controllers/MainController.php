@@ -1,14 +1,15 @@
 <?php
 
 require_once 'models/MainModel.php';
+require_once 'Controller.php';
 
-class MainController {
+class MainController extends Controller {
 
     public function process() {
-        $db = new MainModel();
-        $building = $db->buildingList();
+        $model = new MainModel();
+        $data = $model->infonocList();
 
-        require_once '/views/MainView.php';
+        $this->_view->render($data);
     }
 
 }

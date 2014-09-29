@@ -13,13 +13,14 @@
                 <th>Building</th>
             </tr>
             <?php
-            foreach ($building as $value) {
+            echo $_SESSION['username'];
+            foreach ($data as $value) {
                 ?>
                 <tr>
-                    <td><?php echo $value['idBuilding'] ?></td>
-                    <td><?php echo $value['Name'] ?></td>
-                    <td><?php echo $value['Floors'] ?></td>
-                    <td><?php echo $value['idCity'] ?></td>
+                    <td><?php echo $value['Id'] ?></td>
+                    <td><?php echo $value['IATACode'] ?></td>
+                    <td><?php echo $value['BookLocator'] ?></td>
+                    <td><?php echo $value['TicketNumber'] ?></td>
                     <td>
                         <form method="POST" action="index.php?command=Test">
                             <input class="prueba" type="submit" name="prueba" value="Pulsa">

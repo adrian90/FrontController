@@ -8,10 +8,10 @@ class MainModel extends DB {
         parent::__construct();
     }
 
-    public function buildingList() {
+    public function infonocList() {
 
         try {
-            $consulta = $this->conn->prepare('SELECT * FROM building');
+            $consulta = $this->conn->prepare('SELECT * FROM infonoc');
             $consulta->execute();
         } catch (Exception $e) {
             return "No se ha podido establecer contacto con la base de datos";

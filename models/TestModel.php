@@ -8,10 +8,10 @@ class TestModel extends DB {
         parent::__construct();
     }
 
-    public function cityList() {
+    public function infonocList2() {
 
         try {
-            $consulta = $this->conn->prepare('SELECT * FROM city');
+            $consulta = $this->conn->prepare('SELECT * FROM infonoc');
             $consulta->execute();
         } catch (Exception $e) {
             return "No se ha podido establecer contacto con la base de datos";

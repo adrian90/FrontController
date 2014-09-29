@@ -1,14 +1,15 @@
 <?php
 
 require_once 'models/TestModel.php';
+require_once 'Controller.php';
 
-class TestController {
+class TestController extends Controller {
 
     public function process() {
-        $db = new TestModel();
-        $city = $db->cityList();
+        $model = new TestModel();
+        $data = $model->infonocList2();
 
-        require_once '/views/TestView.php';
+        $this->_view->render($data);
     }
 
 }
