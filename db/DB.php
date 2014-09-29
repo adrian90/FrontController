@@ -2,10 +2,10 @@
 
 abstract class DB {
 
-    const DBHOST = "localhost";
-    const DBUSER = "root";
-    const DBPASS = "test";
-    const DBNAME = "nocturno";
+    const DBHOST = "";
+    const DBUSER = "";
+    const DBPASS = "";
+    const DBNAME = "";
 
     protected $conn;
 
