@@ -10,6 +10,9 @@ class TestController extends Controller {
         $data = $model->infonocList2();
 
         $this->_view->render($data);
+        
+        //Lanzar peticiones a otro controlador
+        //header("Location: index.php?command=Main");
     }
 
 }

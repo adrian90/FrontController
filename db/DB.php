@@ -19,7 +19,7 @@ abstract class DB {
         try {
             $this->conn = new PDO("mysql:host={$dbhost};dbname={$dbname};", $dbuser, $dbpass);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->conn->exec("SET NAMES 'utf8'; SET time_zone = '+1:00';");
+            $this->conn->exec("SET NAMES 'utf8'; SET time_zone = 'Europe/London';");
         } catch (Exception $e) {
             return "No se ha podido establecer contacto con la base de datos";
         }
