@@ -21,7 +21,7 @@
                     <td><?php echo $value['BookLocator'] ?></td>
                     <td><?php echo $value['TicketNumber'] ?></td>
                     <td>
-                        <form method="POST" action="index.php?command=Test">
+                        <form method="POST" action="Test">
                             <input class="prueba" type="submit" name="prueba" value="Pulsa">
                             <input type="hidden" name="prueba" value="Hola">
                         </form>

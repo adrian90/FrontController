@@ -9,13 +9,22 @@ class View {
     
     
     public function __construct() {
-        if (!empty($_GET['command']))
+        $uri = explode('/',$_SERVER["REQUEST_URI"]);
+        $uri = array_pop($uri);
+        
+        /*if (!empty($_GET['command']))
             $this->_controlador = $_GET['command'];
         else
-            $this->_controlador = "Main";
+            $this->_controlador = "Main";*/
+        
+        if (!empty($uri))
+            $this->_controlador = $uri;
+        else
+            $this->_controlador = "Inicio";
+        
         $this->titulo = "Canaryfly";
-        $this->header = "views/layout/". "header.php";
-        $this->footer = "views/layout/". "footer.php";
+        $this->header = "view/layout/". "header.php";
+        $this->footer = "view/layout/". "footer.php";
         
         $this->layoutParams = array (
             'ruta_css' => "views/layout/". "css/",

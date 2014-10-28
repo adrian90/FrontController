@@ -1,0 +1,16 @@
+#####################################
+#									#
+#	.htaccess Canaryfly				#
+#	@author: Ricardo Nuñez Monzón	#
+#	@property: Canaryfly S.L.		#
+#									#
+#####################################
+
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine On
+
+# Reescritura
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php [L]

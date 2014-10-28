@@ -6,10 +6,19 @@ class FrontController {
     static function main() {
         require_once 'libs/Config.php';
         require_once 'libs/conf.php';
-        if (!empty($_GET['command']))
+        
+        $uri = explode('/', $_SERVER["REQUEST_URI"]);
+        $uri = array_pop($uri);
+        
+        if (!empty($uri))
+            $controllerName = $uri . 'Controller';
+        else
+            $controllerName = "InicioController";
+        
+        /*if (!empty($_GET['command']))
             $controllerName = $_GET['command'] . 'Controller';
         else
-            $controllerName = "MainController";
+            $controllerName = "MainController";*/
 
         //Lo mismo sucede con las acciones, si no hay acción, tomamos index como acción
         /*  if(! empty($_GET['accion']))

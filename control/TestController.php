@@ -12,7 +12,6 @@ class TestController extends Controller {
         $this->_view->render($data);
         
         //Lanzar peticiones a otro controlador
-        //header("Location: index.php?command=Main");
+        //header("Location: Main");
     }
-
 }

@@ -2,6 +2,6 @@
 
 $config = Config::singleton();
 
-$config->set('controllersFolder', 'controllers/');
-$config->set('modelsFolder', 'models/');
-$config->set('viewsFolder', 'views/');
+$config->set('controllersFolder', 'control/');
+$config->set('modelsFolder', 'model/');
+$config->set('viewsFolder', 'view/');
