@@ -27,14 +27,14 @@ class View {
         $this->footer = "view/layout/". "footer.php";
         
         $this->layoutParams = array (
-            'ruta_css' => "views/layout/". "css/",
-            'ruta_img' => "views/layout/". "img/",
-            'ruta_js' =>  "views/layout/". "css/"
+            'ruta_css' => "view/layout/". "css/",
+            'ruta_img' => "view/layout/". "img/",
+            'ruta_js' =>  "view/layout/". "css/"
         );
     }
     
     public function render($data){ 
-        $rutaVista = 'views/' . $this->_controlador . 'View' . '.php';
+        $rutaVista = 'view/' . $this->_controlador . 'View' . '.php';
         if (is_readable($rutaVista)){
             require_once $this->header;
             require_once $rutaVista;
